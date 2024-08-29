@@ -19,7 +19,12 @@
 body {
   background-color: #edf7f6;
 }
-
+h1 {
+  font-size: 38px;
+}
+h2 {
+  font-size: 20px;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

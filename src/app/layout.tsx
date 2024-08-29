@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.css";
 
@@ -23,9 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${poppins.className} flex min-h-screen flex-col container mx-auto`}>
         <Header />
-        {children}
+        <main className="grow p-6">{children}</main>
+        <Footer />
       </body>
     </html>
   );
