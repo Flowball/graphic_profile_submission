@@ -24,9 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} flex min-h-screen flex-col container mx-auto`}>
+      <body className={`${poppins.className} flex min-h-screen flex-col container mx-auto `}>
         <Header />
-        <main className="grow p-6 overflow-x-hidden">{children}</main>
+        <main className="grow p-6 ">{children}</main>
         <Footer />
       </body>
     </html>
