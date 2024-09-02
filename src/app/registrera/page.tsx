@@ -7,7 +7,7 @@ import { z, ZodType } from "zod";
 import DoneSubmission from "../components/DoneSubmission";
 import LoadingIcon from "../components/LoadingIcon";
 
-type Inputs = {
+export type Inputs = {
   parcelID: string;
   name: string;
   weigth: string;
@@ -46,11 +46,9 @@ export default function Registrera() {
     }, 2000);
   };
 
-  if (formState.isSubmitting) return <div>RÖÖÖV</div>;
   return (
     <div className="flex flex-col gap-4">
       {loading && <LoadingIcon />}
-
       {!submitted ? (
         <>
           <h1 className="lg:self-center">REGISTRERA PAKET MANUELLT</h1>
@@ -111,6 +109,7 @@ export default function Registrera() {
           </form>
         </>
       ) : (
+        //@ts-ignore
         <DoneSubmission data={submission} />
       )}
     </div>

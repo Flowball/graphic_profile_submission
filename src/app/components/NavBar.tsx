@@ -27,7 +27,7 @@ export default function NavBar() {
       <nav className="hidden md:block">
         <ul className="flex gap-20 2xl:gap-36  text-xl font-light transition-all ease-in-out">
           {navItems.map((navItem) => (
-            <Link href={navItem.link} key={navItem.link}>
+            <Link href={navItem.link} key={navItem.title}>
               <li
                 className={`cursor-pointer p-2 ${
                   pathname === `${navItem.link}` ? "bg-[#FFDE00]" : "hoverTransition"
@@ -56,7 +56,8 @@ export default function NavBar() {
               <Link
                 href={navItem.link}
                 onClick={() => handleRouteClick()}
-                className="text-4xl block "
+                className="text-4xl block"
+                key={navItem.title}
               >
                 <li
                   className={`inline-block p-2 ${pathname === `${navItem.link}` && "bg-[#FFDE00]"}`}

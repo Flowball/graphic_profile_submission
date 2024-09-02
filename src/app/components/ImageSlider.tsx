@@ -23,7 +23,7 @@ export default function ImageSlider() {
         blurBoderColor={"red"}
       >
         {suppliers.map((supplier) => (
-          <Slider.Slide>
+          <Slider.Slide key={supplier.link}>
             <Link href={supplier.link} target="_blank">
               <Image src={supplier.image} width={200} height={200} alt="logotype" />
             </Link>

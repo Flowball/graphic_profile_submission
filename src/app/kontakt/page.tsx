@@ -33,12 +33,9 @@ export default function Kontakt() {
   return (
     <>
       {submitted ? (
-        <div>
-          <h1>Tack!</h1> För att du kontaktar oss{" "}
-          <span className="inline-block font-semibold text-2xl">{submittedData}</span>
-          <div>
-            <h2>CTA</h2>
-          </div>
+        <div className="flex flex-col m-auto">
+          <h1>Tack!</h1> <p>För att du kontaktar oss {submittedData}.</p>
+          <p>Vi återkommer nog aldrig.</p>
         </div>
       ) : (
         <div className="flex flex-col gap-4 lg:w-3/5 lg:mx-auto">
