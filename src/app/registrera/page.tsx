@@ -48,14 +48,16 @@ export default function Registrera() {
 
   if (formState.isSubmitting) return <div>RÖÖÖV</div>;
   return (
-    <div>
-      {/* <div>{JSON.stringify(formState.errors)}</div> */}
+    <div className="flex flex-col gap-4">
       {loading && <LoadingIcon />}
 
       {!submitted ? (
         <>
-          <h1>REGISTRERA PAKET MANUELLT</h1>
-          <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
+          <h1 className="lg:self-center">REGISTRERA PAKET MANUELLT</h1>
+          <form
+            className="flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:w-3/5 lg:self-center relative"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <div className={`inputBlock `}>
               <h3>Sändnings-ID</h3>
               <input
@@ -101,7 +103,7 @@ export default function Registrera() {
               )}
             </div>
             <button
-              className="w-full bg-[#1A9DD9] rounded-2xl px-2 py-4 text-white font-semibold"
+              className="w-full bg-[#1A9DD9] rounded-2xl px-2 py-4 text-white font-semibold lg:col-span-2"
               type="submit"
             >
               Registrera

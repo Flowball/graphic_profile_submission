@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import Image from "next/image";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { ZodType, z } from "zod";
@@ -40,14 +41,24 @@ export default function Kontakt() {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col gap-4">
-          <h1>Kontakt</h1>
-          <section>
-            På <p className="inline-block font-bold">PAK</p> älskar vi våra användare så mycket att
-            vi gömt supporten bakom en FAQ som knappast löser ditt problem. Om du trots allt vill
-            kontakta oss, fyll i ett formulär som vi kanske läser – någon gång. Våra supporttider?
-            Självklart 9-17, för problem uppstår ju aldrig utanför kontorstid, eller hur?
-          </section>
+        <div className="flex flex-col gap-4 lg:w-3/5 lg:mx-auto">
+          <h1 className="lg:self-center">KONTAKT</h1>
+          <div className="flex w-full gap-4">
+            <section className="lg:w-2/4">
+              På <p className="inline-block font-bold">PAK</p> älskar vi våra användare så mycket
+              att vi gömt supporten bakom en FAQ som knappast löser ditt problem. Om du trots allt
+              vill kontakta oss, fyll i ett formulär som vi kanske läser – någon gång. Våra
+              supporttider? Självklart 9-17, för problem uppstår ju aldrig utanför kontorstid, eller
+              hur?
+            </section>
+            <Image
+              src={"/prarie.jpg"}
+              width={200}
+              height={200}
+              className="w-2/4 hidden lg:block"
+              alt="Image of prarie dog sitting by computer"
+            />
+          </div>
           <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
             <div className="inputBlock">
               <p>E-postadress</p>
@@ -70,7 +81,7 @@ export default function Kontakt() {
             <div className="inputBlock">
               <p>Meddelande</p>
               <textarea
-                rows={10}
+                rows={5}
                 {...register("message")}
                 className={`${formState.errors.message && "border-2 border-red-300"}`}
               />

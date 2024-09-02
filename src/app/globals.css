@@ -47,6 +47,18 @@ textarea {
   @apply w-full bg-[#1A9DD9] rounded-2xl px-2 py-4 text-white font-semibold;
 }
 
+.hoverTransition {
+  background: linear-gradient(to right, #ffde00, #ffde00 50%, #edf7f6 50%);
+  color: black;
+  background-size: 250% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+
+.hoverTransition:hover {
+  background-position: 0 100%;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
