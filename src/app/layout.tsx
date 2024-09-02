@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} flex min-h-screen flex-col container mx-auto`}>
         <Header />
-        <main className="grow p-6 lg:my-36">{children}</main>
+        <main className="flex flex-col grow p-6 justify-center">{children}</main>
         <Footer />
       </body>
     </html>

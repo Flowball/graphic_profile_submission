@@ -55,7 +55,7 @@ export default function Kontakt() {
               src={"/prarie.jpg"}
               width={200}
               height={200}
-              className="w-2/4 hidden lg:block"
+              className="w-2/4 hidden lg:block object-cover"
               alt="Image of prarie dog sitting by computer"
             />
           </div>
