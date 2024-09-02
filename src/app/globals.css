@@ -29,11 +29,22 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 section {
-  font-size: 18px;
+  font-size: 20px;
+}
+.inputBlock {
+  @apply flex flex-col gap-2;
+}
+.inputBlock > input,
+textarea {
+  @apply w-full rounded-lg px-4 py-4 shadow-md;
+}
+
+.pakButton {
+  @apply w-full bg-[#1A9DD9] rounded-2xl px-2 py-4 text-white font-semibold;
 }
 
 @layer utilities {

@@ -7,7 +7,7 @@ import { z, ZodType } from "zod";
 import DoneSubmission from "../components/DoneSubmission";
 import LoadingIcon from "../components/LoadingIcon";
 
-export type Inputs = {
+type Inputs = {
   parcelID: string;
   name: string;
   weigth: string;
@@ -56,52 +56,44 @@ export default function Registrera() {
         <>
           <h1>REGISTRERA PAKET MANUELLT</h1>
           <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
-            <div className={`flex flex-col gap-2 `}>
+            <div className={`inputBlock `}>
               <h3>Sändnings-ID</h3>
               <input
                 type="text"
-                className={`w-full rounded-lg px-4 py-4 shadow-md ${
-                  formState.errors.parcelID && "border-2 border-red-300"
-                }`}
+                className={`${formState.errors.parcelID && "border-2 border-red-300"}`}
                 {...register("parcelID")}
               />
               {formState.errors.parcelID && (
                 <div className="text-red-500">{formState.errors.parcelID.message}</div>
               )}
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="inputBlock">
               <h3>Namn på paket</h3>
               <input
                 type="text"
-                className={`w-full rounded-lg px-4 py-4 shadow-md ${
-                  formState.errors.name && "border-2 border-red-300"
-                }`}
+                className={`${formState.errors.name && "border-2 border-red-300"}`}
                 {...register("name")}
               />
               {formState.errors.name && (
                 <div className="text-red-500">{formState.errors.name?.message}</div>
               )}
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="inputBlock">
               <h3>Vikt (gram)</h3>
               <input
                 type="text"
-                className={`w-full rounded-lg px-4 py-4 shadow-md ${
-                  formState.errors.weigth && "border-2 border-red-300"
-                }`}
+                className={`${formState.errors.weigth && "border-2 border-red-300"}`}
                 {...register("weigth")}
               />
               {formState.errors.weigth && (
                 <div className="text-red-500">{formState.errors.weigth.message}</div>
               )}
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="inputBlock">
               <h3>Längd (cm)</h3>
               <input
                 type="text"
-                className={`w-full rounded-lg px-4 py-4 shadow-md ${
-                  formState.errors.length && "border-2 border-red-300"
-                }`}
+                className={`${formState.errors.length && "border-2 border-red-300"}`}
                 {...register("length")}
               />
               {formState.errors.length && (

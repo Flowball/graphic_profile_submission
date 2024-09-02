@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center py-4 px-6 overflow-hidden">
+    <header className="flex justify-between items-center py-4 px-6 overflow-hidden ">
       <Link href={"/"}>
         <Image
           src={"/pak_logo.svg"}
