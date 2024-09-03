@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-4 items-center lg:mx-36">
       <h1>SVERIGES BÄSTA SPÅRNINGSTJÄNST</h1>
-      <div className="flex flex-col gap-2 lg:flex-row h-full lg:w-4/5">
-        <h3 className="lg:w-2/4 lg:self-center ">
+      <div className="flex flex-col gap-2 lg:flex-row h-full lg:w-5/5">
+        <h3 className="lg:w-2/4 ">
           När det kommer till att hålla koll på dina paket, finns det inget bättre alternativ än
           oss. Vi är Sveriges mest pålitliga och avancerade spårningstjänst, och vi vet att du inte
           nöjer dig med mindre. Vårt system är så exakt att vi nästan kan förutsäga din leverans
@@ -15,10 +15,10 @@ export default function Home() {
         </h3>
         <Image
           src={"/parcel_man.jpg"}
-          width={200}
-          height={200}
+          width={500}
+          height={500}
           alt="man holding a parcel"
-          className="w-full lg:w-2/4"
+          className="w-full lg:w-2/4 object-cover"
         />
       </div>
     </div>
