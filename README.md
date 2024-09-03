@@ -1,3 +1,5 @@
+⚠️ School project, fictional app ⚠️
+
 # Graphical Profile Project
 
 ## Project Overview
